@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Disadvantage</title>
+		
+		<link rel="stylesheet" type="text/css" href="style.css">
+		</style>
+		
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css">
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+	
+	</head>
+	
+	<body>
+	
+
+	
+<!--Place where I inserted the navigation bar for the page desaster-->	
+<div id="sidebar">
+<div id="log">
+<a href="home.html"><img src="logo_navi.jpg"></a>
+</div>
+<div id="menu">
+<ul style="list-style-type:none">
+<li> <a href="introduction.html">INTRODUCTION</a><br> </li>
+<li> <a href="nuclear in europe.html">NUCLEAR IN EUROPE</a><br></li>
+<li> <a href="advantage.html">ADVANTAGE</a><br> </li>
+<li> <a href="disadvantage.html">DISADVANTAGE</a><br></li>
+<li> <a href="diary.html">DIARY</a><br></li>
+</ul>
+<div id="bottom">
+ <a href="https://www.facebook.com/"><img src="icon-facebook.png"></a> 
+ <a href="https://www.linkedin.com/"><img src="icon-linkedin.png"></a>
+<a href="https://www.flickr.com/"><img src="icon-flickr.png"></a>
+<a href="https://www.google.at/"><img src="icon-google.png"></a>
+</div>
+</div>
+</div>
+	<div id="mapcontainer">
+	<h2>Nuclear Disasters in Europe</h2>
+	<div id="map">	<!--Title-->	
+	</div>
+	
+<!-- script code removed from the slides, in order to insert my map-->	
+	<script> 
+	var map = L.map('map').setView([51.4, 30.1], 3); 
+	//Code extracted from 04-02-leaflet-map.html example. 
+	var layer = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
+}).addTo(map);
+	
+//Markers code for my Leaflet map. Marker for my Fleurus-Belgium. 
+	var icon = L.icon({
+	iconUrl: 'marker.png',
+	iconSize: [35, 35], // size of the icon
+	iconAnchor: [30, 24] // point of the icon which will correspond to marker's location
+	});
+	
+	var pos = [ 50.483333, 4.533333];
+	var marker = L.marker(pos, {
+	title: "Fleurus-Belgium",
+	icon: icon
+	});
+	marker.addTo(map)
+    .bindPopup('<p><div style="text-align: center"><strong>Fleurus</strong></div></p><p><strong>&#9762 Year:</strong> 2006</p><p><strong>&#9762 INES Level:</strong> 4</p><p><div style="text-align: justify"><strong>&#9762 Description: </strong>Severe health effects for a worker at a commercial irradiation facility as a result of high doses of radiation.</div></p>')
+	.openPopup()
+	.closePopup();
+	
+	//Rectangle for my Leaflet regarding Fleurus-Belgium. 
+	var bounds = [[50.4, 4.5], [50.5, 4.6]];
+	var rect = L.rectangle(bounds, {
+	color: "#0000ff",
+	fill: false,
+	weight: 2
+	});
+	rect.addTo(map);
+	
+	//Markers code for my Leaflet map. Marker for my Forsmark. 
+	var icon = L.icon({
+	iconUrl: 'marker.png',
+	iconSize: [35, 35], // size of the icon
+	iconAnchor: [30, 24] // point of the icon which will correspond to marker's location
+	});
+	
+	var pos = [ 60.403333, 18.166667];
+	var marker = L.marker(pos, {
+	title: "Forsmark",
+	icon: icon
+	});
+	marker.addTo(map)
+    .bindPopup('<p><div style="text-align: center"><strong>Forsmark</strong></div></p><p><strong>&#9762 Year:</strong> 2006</p><p><strong>&#9762 INES Level:</strong> 2</p><p><div style="text-align: justify"><strong>&#9762 Description: </strong>Degraded safety functions for common cause failure in the emergency power supply system at nuclear power plant.</div></p>')
+	.openPopup()
+	.closePopup();
+	
+	//Rectangle for my Leaflet regarding Forsmark. 
+	var bounds = [[60.4, 18.1], [60.5, 18.2]];
+	var rect = L.rectangle(bounds, {
+	color: "#0000ff",
+	fill: false,
+	weight: 2
+	});
+	rect.addTo(map);
+	
+	//Markers code for my Leaflet map. Marker for my Sellafield. 
+	var icon = L.icon({
+	iconUrl: 'marker.png',
+	iconSize: [35, 35], // size of the icon
+	iconAnchor: [30, 24] // point of the icon which will correspond to marker's location
+	});
+	
+	var pos = [ 54.4205, -3.4975];
+	var marker = L.marker(pos, {
+	title: "Sellafield",
+	icon: icon
+	});
+	marker.addTo(map)
+    .bindPopup('<p><div style="text-align: center"><strong>Sellafield</strong></div></p><p><div style="text-align: center"><strong>Event I</strong></div><strong>&#9762 Year:</strong> 1957</p><p><strong>&#9762 INES Level:</strong> 5</p><p><div style="text-align: justify"><strong>&#9762 Description: </strong>Release of radioactive material to the environment following a fire in a reactor core.</div></p><p><div style="text-align: center"><strong>Event II</strong></div><strong>&#9762 Year:</strong> 2005</p><p><strong>&#9762 INES Level:</strong> 3</p><p><div style="text-align: justify"><strong>&#9762 Description: </strong>Release of large quantity of radioactive material, contained within the installation.</div></p>')
+	.openPopup()
+	.closePopup();
+	
+	//Rectangle for my Leaflet regarding Sellafield. 
+	var bounds = [[54.35, -3.4], [54.45, -3.5]];
+	var rect = L.rectangle(bounds, {
+	color: "#0000ff",
+	fill: false,
+	weight: 2
+	});
+	rect.addTo(map);
+	
+	//Markers code for my Leaflet map. Marker for my Paks. 
+	var icon = L.icon({
+	iconUrl: 'marker.png',
+	iconSize: [35, 35], // size of the icon
+	iconAnchor: [30, 24] // point of the icon which will correspond to marker's location
+	});
+	
+	var pos = [ 46.5725, 18.854167];
+	var marker = L.marker(pos, {
+	title: "Paks",
+	icon: icon
+	});
+	marker.addTo(map)
+    .bindPopup('<p><div style="text-align: center"><strong>Paks</strong></div></p><p><strong>&#9762 Year:</strong> 2003</p><p><strong>&#9762 INES Level:</strong> 3</p><p><div style="text-align: justify"><strong>&#9762 Description: </strong>Partially spent fuel rods undergoing cleaning in a tank of heavy water ruptured and spilled fuel pellets.</div></p>')
+	.openPopup()
+	.closePopup();
+	
+	//Rectangle for my Leaflet regarding Paks. 
+	var bounds = [[46.5, 18.8], [46.6, 18.9]];
+	var rect = L.rectangle(bounds, {
+	color: "#0000ff",
+	fill: false,
+	weight: 2
+	});
+	rect.addTo(map);
+	
+	//Markers code for my Leaflet map. Marker for my Ikitelli-Turkey. 
+	var icon = L.icon({
+	iconUrl: 'marker.png',
+	iconSize: [35, 35], // size of the icon
+	iconAnchor: [30, 24] // point of the icon which will correspond to marker's location
+	});
+	
+	var pos = [41.0792, 28.7825];
+	var marker = L.marker(pos, {
+	title: "Ikitelli",
+	icon: icon
+	});
+	marker.addTo(map)
+    .bindPopup('<p><div style="text-align: center"><strong>Ikitelli</strong></div></p><p><strong>&#9762 Year:</strong> 1999</p><p><strong>&#9762 INES Level:</strong> 3</p><p><div style="text-align: justify"><strong>&#9762 Description: </strong>Loss of a highly radioactive Co-60 source.</div></p>')
+	.openPopup()
+	.closePopup();
+	
+	//Rectangle for my Leaflet regarding Ikitelli-Turkey. 
+	var bounds = [[41.0, 28.7], [41.1, 28.8]];
+	var rect = L.rectangle(bounds, {
+	color: "#0000ff",
+	fill: false,
+	weight: 2
+	});
+	rect.addTo(map);
+	
+	//Markers code for my Leaflet map. Marker for my Tomsk-Russia. 
+	var icon = L.icon({
+	iconUrl: 'marker.png',
+	iconSize: [35, 35], // size of the icon
+	iconAnchor: [30, 24] // point of the icon which will correspond to marker's location
+	});
+	
+	var pos = [56.5, 84.966667];
+	var marker = L.marker(pos, {
+	title: "Tomsk",
+	icon: icon
+	});
+	marker.addTo(map)
+    .bindPopup('<p><div style="text-align: center"><strong>Tomsk</strong></div></p><p><strong>&#9762 Year:</strong> 1993</p><p><strong>&#9762 INES Level:</strong> 4</p><p><div style="text-align: justify"><strong>&#9762 Description: </strong>Pressure buildup led to an explosive mechanical failure.</div></p>')
+	.openPopup()
+	.closePopup();
+	
+	//Rectangle for my Leaflet regarding Tomsk-Russia. 
+	var bounds = [[56.45, 84.9], [56.55, 85.0]];
+	var rect = L.rectangle(bounds, {
+	color: "#0000ff",
+	fill: false,
+	weight: 2
+	});
+	rect.addTo(map);
+	
+	//Markers code for my Leaflet map. Marker for my Cadarache-France. 
+	var icon = L.icon({
+	iconUrl: 'marker.png',
+	iconSize: [35, 35], // size of the icon
+	iconAnchor: [30, 24] // point of the icon which will correspond to marker's location
+	});
+	
+	var pos = [43.6875, 5.761944];
+	var marker = L.marker(pos, {
+	title: "Cadarache",
+	icon: icon
+	});
+	marker.addTo(map)
+    .bindPopup('<p><div style="text-align: center"><strong>Cadarache</strong></div></p><p><strong>&#9762 Year:</strong> 1993</p><p><strong>&#9762 INES Level:</strong> 2</p><p><div style="text-align: justify"><strong>&#9762 Description: </strong>Spread of contamination to an area not expected by design.</div></p>')
+	.openPopup()
+	.closePopup();
+	
+	//Rectangle for my Leaflet regarding Cadarache-France. 
+	var bounds = [[43.6, 5.7], [43.7, 5.8]];
+	var rect = L.rectangle(bounds, {
+	color: "#0000ff",
+	fill: false,
+	weight: 2
+	});
+	rect.addTo(map);
+	
+	//Markers code for my Leaflet map. Marker for my Vandellos-Spain. 
+	var icon = L.icon({
+	iconUrl: 'marker.png',
+	iconSize: [35, 35], // size of the icon
+	iconAnchor: [30, 24] // point of the icon which will correspond to marker's location
+	});
+	
+	var pos = [40.951389, 0.866667];
+	var marker = L.marker(pos, {
+	title: "Vandellos",
+	icon: icon
+	});
+	marker.addTo(map)
+    .bindPopup('<p><div style="text-align: center"><strong>Vandellos</strong></div></p><p><strong>&#9762 Year:</strong> 1989</p><p><strong>&#9762 INES Level:</strong> 3</p><p><div style="text-align: justify"><strong>&#9762 Description: </strong>Near accident caused by fire resulting in loss of safety systems at the nuclear power station.</div></p>')
+	.openPopup()
+	.closePopup();
+	
+	//Rectangle for my Leaflet regarding Vandellos-Spain. 
+	var bounds = [[40.9, 0.8], [41.0, 0.9]];
+	var rect = L.rectangle(bounds, {
+	color: "#0000ff",
+	fill: false,
+	weight: 2
+	});
+	rect.addTo(map);
+	
+	//Markers code for my Leaflet map. Marker for my Greifswald-Germany. 
+	var icon = L.icon({
+	iconUrl: 'marker.png',
+	iconSize: [35, 35], // size of the icon
+	iconAnchor: [30, 24] // point of the icon which will correspond to marker's location
+	});
+	
+	var pos = [54.140586, 13.664422];
+	var marker = L.marker(pos, {
+	title: "Greifswald",
+	icon: icon
+	});
+	marker.addTo(map)
+    .bindPopup('<p><div style="text-align: center"><strong>Greifswald</strong></div></p><p><strong>&#9762 Year:</strong> 1989</p><p><strong>&#9762 INES Level:</strong> N/A</p><p><div style="text-align: justify"><strong>&#9762 Description: </strong>Excessive heating which damaged ten fuel rods.</div></p>')
+	.openPopup()
+	.closePopup();
+	
+	//Rectangle for my Leaflet regarding Greifswald-Germany. 
+	var bounds = [[54.1, 13.6], [54.2, 13.7]];
+	var rect = L.rectangle(bounds, {
+	color: "#0000ff",
+	fill: false,
+	weight: 2
+	});
+	rect.addTo(map);
+	
+	//Markers code for my Leaflet map. Marker for my Chernobyl-Ukraine. 
+	var icon = L.icon({
+	iconUrl: 'marker.png',
+	iconSize: [35, 35], // size of the icon
+	iconAnchor: [30, 24] // point of the icon which will correspond to marker's location
+	});
+	
+	var pos = [51.389553, 30.099147];
+	var marker = L.marker(pos, {
+	title: "Chernobyl",
+	icon: icon
+	});
+	marker.addTo(map)
+    .bindPopup('<p><div style="text-align: center"><strong>Chernobyl</strong></div></p><p><strong>&#9762 Year:</strong> 1986</p><p><strong>&#9762 INES Level:</strong> 7</p><p><div style="text-align: justify"><strong>&#9762 Description: </strong>Widespread health and environmental effects. External release of a significant fraction of reactor core inventory.</div></p>')
+	.openPopup()
+	.closePopup();
+	
+	//Rectangle for my Leaflet regarding Chernobyl-Ukraine. 
+	var bounds = [[51.3, 30.0], [51.4, 30.1]];
+	var rect = L.rectangle(bounds, {
+	color: "#0000ff",
+	fill: false,
+	weight: 2
+	});
+	rect.addTo(map);
+	
+	//Markers code for my Leaflet map. Marker for my Hamm-Uentrop, Germany. 
+	var icon = L.icon({
+	iconUrl: 'marker.png',
+	iconSize: [35, 35], // size of the icon
+	iconAnchor: [30, 24] // point of the icon which will correspond to marker's location
+	});
+	
+	var pos = [51.679167, 7.971667];
+	var marker = L.marker(pos, {
+	title: "Hamm-Uentrop",
+	icon: icon
+	});
+	marker.addTo(map)
+    .bindPopup('<p><div style="text-align: center"><strong>Hamm-Uentrop</strong></div></p><p><strong>&#9762 Year:</strong> 1986</p><p><strong>&#9762 INES Level:</strong> N/A</p><p><div style="text-align: justify"><strong>&#9762 Description: </strong>Spherical fuel pebble became lodged in the pipe used to deliver fuel elements to the reactor.</div></p>')
+	.openPopup()
+	.closePopup();
+	
+	//Rectangle for my Leaflet regarding Hamm-Uentrop,Germany. 
+	var bounds = [[51.6, 7.9], [51.7, 8.0]];
+	var rect = L.rectangle(bounds, {
+	color: "#0000ff",
+	fill: false,
+	weight: 2
+	});
+	rect.addTo(map);
+	
+	//Markers code for my Leaflet map. Marker for my Saint Laurent des Eaux, France. 
+	var icon = L.icon({
+	iconUrl: 'marker.png',
+	iconSize: [35, 35], // size of the icon
+	iconAnchor: [30, 24] // point of the icon which will correspond to marker's location
+	});
+	
+	var pos = [47.723982, 1.58349];
+	var marker = L.marker(pos, {
+	title: "Saint Laurent des Eaux",
+	icon: icon
+	});
+	marker.addTo(map)
+    .bindPopup('<p><div style="text-align: center"><strong>Saint Laurent des Eaux</strong></div></p><p><strong>&#9762 Year:</strong> 1980</p><p><strong>&#9762 INES Level:</strong> 4</p><p><div style="text-align: justify"><strong>&#9762 Description: </strong>Melting of one channel of fuel in the reactor with no release outside the site.</div></p>')
+	.openPopup()
+	.closePopup();
+	
+	//Rectangle for my Leaflet regarding Saint Laurent des Eaux, France. 
+	var bounds = [[47.7, 1.5], [47.8, 1.6]];
+	var rect = L.rectangle(bounds, {
+	color: "#0000ff",
+	fill: false,
+	weight: 2
+	});
+	rect.addTo(map);
+	
+	//Markers code for my Leaflet map. Marker for my Jaslovské Bohunice,Czechoslovakia. 
+	var icon = L.icon({
+	iconUrl: 'marker.png',
+	iconSize: [35, 35], // size of the icon
+	iconAnchor: [30, 24] // point of the icon which will correspond to marker's location
+	});
+	
+	var pos = [48.476111, 17.65];
+	var marker = L.marker(pos, {
+	title: "Jaslovské Bohunice",
+	icon: icon
+	});
+	marker.addTo(map)
+    .bindPopup('<p><div style="text-align: center"><strong>Jaslovské Bohunice</strong></div></p><p><strong>&#9762 Year:</strong> 1977</p><p><strong>&#9762 INES Level:</strong> 4</p><p><div style="text-align: justify"><strong>&#9762 Description: </strong>Damaged fuel integrity, extensive corrosion damage of fuel cladding and release of radioactivity.</div></p>')
+	.openPopup()
+	.closePopup();
+	
+	//Rectangle for my Leaflet regarding Jaslovské Bohunice,Czechoslovakia. 
+	var bounds = [[48.4, 17.6], [48.5, 17.7]];
+	var rect = L.rectangle(bounds, {
+	color: "#0000ff",
+	fill: false,
+	weight: 2
+	});
+	rect.addTo(map);
+	
+	//Markers code for my Leaflet map. Marker for my Lucens, Switzerland. 
+	var icon = L.icon({
+	iconUrl: 'marker.png',
+	iconSize: [35, 35], // size of the icon
+	iconAnchor: [30, 24] // point of the icon which will correspond to marker's location
+	});
+	
+	var pos = [46.7, 6.85];
+	var marker = L.marker(pos, {
+	title: "Lucens",
+	icon: icon
+	});
+	marker.addTo(map)
+    .bindPopup('<p><div style="text-align: center"><strong>Lucens</strong></div></p><p><strong>&#9762 Year:</strong> 1969</p><p><strong>&#9762 INES Level:</strong> N/A</p><p><div style="text-align: justify"><strong>&#9762 Description: </strong>Total loss of coolant led to a power excursion and explosion of experimental reactor.</div></p>')
+	.openPopup()
+	.closePopup();
+	
+	//Rectangle for my Leaflet regarding Lucens, Switzerland. 
+	var bounds = [[46.65, 6.8], [46.75, 6.9]];
+	var rect = L.rectangle(bounds, {
+	color: "#0000ff",
+	fill: false,
+	weight: 2
+	});
+	rect.addTo(map);
+	
+	//Markers code for my Leaflet map. Marker for my Chapelcross, UK. 
+	var icon = L.icon({
+	iconUrl: 'marker.png',
+	iconSize: [35, 35], // size of the icon
+	iconAnchor: [30, 24] // point of the icon which will correspond to marker's location
+	});
+	
+	var pos = [55.01566, -3.22605];
+	var marker = L.marker(pos, {
+	title: "Chapelcross",
+	icon: icon
+	});
+	marker.addTo(map)
+    .bindPopup('<p><div style="text-align: center"><strong>Chapelcross</strong></div></p><p><strong>&#9762 Year:</strong> 1967</p><p><strong>&#9762 INES Level:</strong> N/A</p><p><div style="text-align: justify"><strong>&#9762 Description: </strong>Graphite debris partially blocked a fuel channel causing a fuel element to melt and catch fire.</div></p>')
+	.openPopup()
+	.closePopup();
+	
+	//Rectangle for my Leaflet regarding Chapelcross, UK. 
+	var bounds = [[54.9, -3.1], [55.1, -3.3]];
+	var rect = L.rectangle(bounds, {
+	color: "#0000ff",
+	fill: false,
+	weight: 2
+	});
+	rect.addTo(map);
+	
+	//Markers code for my Leaflet map. Marker for my Mayak, Russia. 
+	var icon = L.icon({
+	iconUrl: 'marker.png',
+	iconSize: [35, 35], // size of the icon
+	iconAnchor: [30, 24] // point of the icon which will correspond to marker's location
+	});
+	
+	var pos = [55.7125, 60.848056];
+	var marker = L.marker(pos, {
+	title: "Kyshtym",
+	icon: icon
+	});
+	marker.addTo(map)
+    .bindPopup('<p><div style="text-align: center"><strong>Kyshtym</strong></div></p><p><strong>&#9762 Year:</strong> 1957</p><p><strong>&#9762 INES Level:</strong> 6</p><p><div style="text-align: justify"><strong>&#9762 Description: </strong>Significant release of radioactive material to the environment from explosion of a high activity waste tank.</div></p>')
+	.openPopup()
+	.closePopup();
+	
+	//Rectangle for my Leaflet regarding Mayak, Russia. 
+	var bounds = [[55.6, 60.7], [55.8, 60.9]];
+	var rect = L.rectangle(bounds, {
+	color: "#0000ff",
+	fill: false,
+	weight: 2
+	});
+	rect.addTo(map);
+
+	</script>
+	
+<!-- svg image -->
+<div id="svg">
+<h3> The International Nuclear and Radiological Event Scale (INES) </h3>
+    
+    <div id="svgimage7">
+    <svg width="50" height="40" onclick=myFunction7()>
+    <rect width="50" height="40"  stroke="green" stroke-width="2" fill="#CC0066"></rect>
+	<text x="20" y="27" font-family="Palatino Linotype" font-size="18" fill="dark gray" > 7 </text>
+    </svg>
+    <svg height="30" width="200">
+    <text x="0" y="15" fill="#CC0066">Major Accident</text>
+    </svg>
+	<script>
+	function myFunction7() {
+	    document.getElementById("demo").innerHTML = "• Major release of radio active material with widespread health and environmental effects requiring implementation of planned and extended countermeasures.";
+	}
+	</script>
+	</div>
+
+    <div id="svgimage6">
+    <svg width="70" height="40" onclick=myFunction6()>
+    <rect width="70" height="40"  stroke="green" stroke-width="2" fill="#CC0000"></rect>
+	<text x="20" y="27" font-family="Palatino Linotype" font-size="18" fill="dark gray" > 6 </text>
+	</svg>
+	<svg height="30" width="200">
+    <text x="0" y="15" fill="#CC0000">Serious Accident</text>
+    </svg>
+	<script>
+	function myFunction6() {
+	    document.getElementById("demo").innerHTML = "• Significant release of radioactive material likely to require implementation of planned countermeasures.";
+	}
+	</script>
+	</div>
+
+	<div id="svgimage5">
+	<svg width="90" height="40" onclick=myFunction5()>
+	<rect width="90" height="40"  stroke="green" stroke-width="2" fill="#FF9900"></rect>
+	<text x="20" y="27" font-family="Palatino Linotype" font-size="18" fill="dark gray" > 5 </text>
+	</svg>
+	<svg height="30" width="180">
+    <text x="0" y="15" fill="#FF9900">Wider Consequences</text>
+    </svg>
+	<script>
+	function myFunction5() {
+	    document.getElementById("demo").innerHTML = "• Limited release of radioactive material likely to require implementation ofsome planned countermeasures;</br><br>• Several deaths from radiation;</br><br>• Severe damage to reactor core;</br><br>• Release of large quantities of radioactive material within an installation with a high probability of significant public exposure. This could arise from a major criticality accident or fire.</br>";
+	}
+	</script>
+	</div>
+
+	<div id="svgimage4">
+    <svg width="110" height="40" onclick=myFunction4()>
+    <rect width="110" height="40"  stroke="green" stroke-width="2" fill="#FFCC00"></rect>
+	<text x="20" y="27" font-family="Palatino Linotype" font-size="18" fill="dark gray" > 4 </text>
+	</svg>
+	<svg height="30" width="160">
+    <text x="0" y="15" fill="#FFCC00">Local Consequences</text>
+    </svg>
+	<script>
+	function myFunction4() {
+	    document.getElementById("demo").innerHTML = "• Minor release of radioactive material unlikely to result in implementation of planned countermeasures other thanlocal food controls;</br><br>• At least one death from  radiation.</br><br>• Fuel melt or damage to fuel resulting in more than 0.1% release of coreinventory;</br><br>• Release of significant quantities of radioactive material within an installation with a high probability of significant public exposure.</br>";
+	}
+	</script>
+	</div>
+
+	<div id="svgimage3">
+    <svg width="130" height="40" onclick=myFunction3()>
+    <rect width="130" height="40"  stroke="green" stroke-width="2" fill="#FFFF00"></rect>
+	<text x="20" y="27" font-family="Palatino Linotype" font-size="18" fill="dark gray" > 3 </text>
+	</svg>
+	<svg height="30" width="140">
+    <text x="0" y="15" fill="#FFFF00">Serious Incident</text>
+    </svg>
+	<script>
+	function myFunction3() {
+	    document.getElementById("demo").innerHTML = "• Exposure in excess of ten times the statutory annual limit for workers;</br><br>• Non-lethal deterministic health effect (e.g., burns) from radiation;</br><br>• Exposure rates of more than 1 Sv/h in an operating area</br><br>• Severe contamination in an area not expected by design, with a low probability of significant public exposure;</br><br>• Near accident at a nuclear power plant with no safety provisions remaining;</br><br>• Lost or stolen highly radioactive sealed source;</br><br>• Misdelivered highly radioactive sealed source without adequate procedures in place to handle it.</br>";
+	}
+	</script>
+	</div>
+
+	<div id="svgimage2">
+    <svg width="150" height="40" onclick=myFunction2()>
+    <rect width="150" height="40"  stroke="green" stroke-width="2" fill="#CCFF00"></rect>
+	<text x="20" y="27" font-family="Palatino Linotype" font-size="18" fill="dark gray" > 2 </text>
+	</svg>
+	<svg height="30" width="120">
+    <text x="0" y="15" fill="#CCFF00">Incident</text>
+    </svg>
+	<script>
+	function myFunction2() {
+	    document.getElementById("demo").innerHTML = "• Exposure of a member of the public in excess of 10 mSv;</br><br>• Exposure of a worker in excess of the statutory annual limits;</br><br>• Radiation levels in an operating area of more than 50 mSv/h;</br><br>• Significant contamination within the facility into an area not expected by design;</br><br>• Significant failures in safety provisions but with no actual consequences;</br><br>• Found highly radioactive sealed orphan source, device or transportpackage with safety provisions intact;</br><br>• Inadequate packaging of a highly radioactive sealed source.</br>";
+	}
+	</script>
+
+	</div>
+	<div id="svgimage1">
+    <svg width="170" height="40" onclick=myFunction1()>
+    <rect width="170" height="40"  stroke="green" stroke-width="2" fill="#66CC00"></rect>
+	<text x="20" y="27" font-family="Palatino Linotype" font-size="18" fill="dark gray" > 1 </text>
+	</svg>
+	<svg height="30" width="100">
+    <text x="0" y="15" fill="#66CC00">Anomaly</text>
+    </svg>
+	<script>
+	function myFunction1() {
+	    document.getElementById("demo").innerHTML = "• Over exposure of a member of the public in excess of statutory annual limits;</br><br>• Minor problems with safety components with significant defence-in-depth remaining;</br><br>• Low activity lost or stolen radioactivesource, device or transport package.</br>";
+	}
+	</script>
+	</div>
+
+<div id="informationbox">
+<p id="demo"></p>
+</div>
+</div>
+</div>
+<br> <br> <BR>
+<!-- disadvantage -->
+
+<div id="waste">
+<h2>Waste and Other Considerations</h2>	
+
+		<p><em>One of</em>  the major considerations when discussing nuclear energy is how to handle the waste. There are three levels of radioactivity in nuclear waste, with the most radioactive being fuel elements, the intermediate level being radionuclides, and low-level waste being clothes and other items exposed. 
+		Various countries have had different solutionsfor dealing with this waste, which poses a problem because it significantly radioactive for many years. 
+		</p>
+
+		<IMG class="displayed"img src="mole.png" alt="molecule">
+
+		 <p>
+		The half-life of the high-level byproducts of nuclear fission of Uranium are lighter elements, primarily Cesium and Strontium. Plutonium’s half-life is 24,000 years, which refers to the amount of time it takes for the radioactive isotopes to decay to half their original weight. 
+		It is very important that this radioactive waste does not leak or contaminate surrounding areas, where it could potentially end up in groundwater or 
+		other places. This, of course, would have serious health risks and therefore must be handled very cautiously to ensure public safety. 
+		</p>
+		<IMG class="fission" img src="fission.png" alt="fission" >
+		<IMG class="displayed" img src="redmole.png" alt="molecule">
+		<p>Waste produced in the United States, for example, is stored in reinforced concrete “dry cells” in a geologic repository, as there is no current method for completely destroying high-level waste as of yet. There this waste remains, unaffected, however 
+		concerns are often raised of the event of an Earthquake or other geological event that could potentially compromise the integrity of the stored waste. 
+		</p>
+		<IMG class="displayed"img src="mole.png" alt="molecule">
+</div>
+</div>
+</body>
+</html>

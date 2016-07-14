@@ -1,0 +1,825 @@
+/*index page*/
+	/*background image*/
+#indeximg img{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	opacity: 0.4;
+}
+	/*index page content*/
+#indexcontent {
+	position: absolute;
+	background-size: 100% 100%;
+	z-index: 1px;
+}
+	/*index page title*/
+#indexcontent h1{	
+	margin-top: 10%;
+	color: white;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 200%;
+}
+	/*index page words*/
+#index h4{
+	color: white;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 120%;
+}
+	/*index page button*/
+#indexcontent a{
+	text-decoration: none;
+}
+.button {
+	display: block;
+	margin-left: 130%;
+	margin-top: 50%;
+	text-align: center;
+	border-radius: 4px;
+	background-color: #707070;
+	border: none;
+	color: #FFFFFF;
+	font-size: 28px;
+    padding: 20px;
+	width: 200px;
+	transition: all 0.5s;
+	cursor: pointer;
+  	border-radius: 20px;
+  	opacity: 1;
+}
+.button span {
+  cursor: pointer;
+  transition: 0.5s;
+   z-index: 1px;
+   opacity: 1;
+}
+.button span:after {
+  content: '>>';
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+  
+}
+.button:hover span {
+  padding-right: 25px;
+  
+}
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+  z-index: 1px;
+}
+
+/*responsive part of index page*/
+@media  (min-width: 320px) {
+	#indexcontent h1{
+		font-size: 100%;
+		margin-left: 70px;
+		margin-top: 20px;
+	}
+	#index h4{
+		font-size: 80%;
+		margin-left: 140px;
+		margin-top: 8px;
+	}
+	.button{
+		width: 100px;
+		font-size: 18px;
+		margin-left: 50%;
+		margin-top: 25%;
+	}
+}
+
+@media  (min-width: 580px) {
+	#indexcontent h1{
+		font-size: 120%;
+		margin-left: 70px;
+		margin-top: 40px;
+	}
+	#index h4{
+		font-size: 100%;
+		margin-left: 140px;
+		margin-top: 15px;
+	}
+	.button{
+		width: 150px;
+		font-size: 24px;
+		margin-left: 80%;
+		margin-top: 45%;
+	}
+}
+
+@media  (min-width: 780px) {
+	#indexcontent h1{
+		font-size: 200%;
+		margin-left: 70px;
+		margin-top: 60px;
+	}
+	#index h4{
+		font-size: 120%;
+		margin-left: 140px;
+		margin-top: 30px;
+	}
+	.button{
+		width: 200px;
+		font-size: 28px;
+		margin-left: 130%;
+		margin-top: 60%;
+	}
+}
+
+
+
+/*navigation bar*/
+#sidebar {
+    background: url(noize.png) repeat 100% 0;
+    background-color: black;
+    position: fixed;
+    height: 100%;
+}
+	/*navigation bar logo image*/
+#log img{
+	border-radius: 100px;
+}
+
+#log img:hover{
+	transform: scale(1.05);
+}
+	
+.log a{
+	margin-top:10px;
+	
+}
+	/*navigation bar list*/
+#menu ul{
+	
+	background: transparent url(menu-line.png) no-repeat center bottom;
+}
+#menu li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    background: transparent url(menu-line.png) no-repeat center top;
+    font-family: 'Tahoma', sans-serif;
+}
+#menu li a:hover {
+    color: #ffb400;
+}
+#menu li a:active {
+	color: #ffb400;
+}
+#bottom {
+	margin-left:55px;
+	}
+.bottom img{
+	margin-left: 10px;
+	}
+
+/*responsive part of navigation bar*/
+@media  (min-width: 220px){
+	#sidebar{
+		width: 50%;
+	}
+	#log {
+     margin-left: 25px;
+     padding-left: 10px;
+     padding-bottom: 10px;
+	}
+	#log img{
+		width: 40%;
+	}
+	#menu ul{
+		padding:0px 0px 0px 10px;
+		font-size: 12px;
+		line-height: 80%;
+	}
+	#menu li a{
+		 padding: 20px 0px 0px 10px;
+	}
+	#bottom {
+	margin-left:15px;
+	}
+}
+@media  (min-width: 580px){
+	#sidebar{
+		width: 30%;
+	}
+	#log {
+     margin-left: 25px;
+     padding-left: 10px;
+     padding-bottom: 10px;
+	}
+	#log img{
+		width: 50%;
+	}
+	#menu ul{
+		padding:0px 0px 0px 10px;
+		font-size: 14px;
+		line-height: 90%;
+	}
+	#menu li a{
+		 padding: 20px 0px 0px 10px;
+	}
+	#bottom {
+	margin-left:30px;
+
+	}
+	
+}
+@media  (min-width: 780px){
+	#sidebar{
+		width: 20%;
+	}
+	#log {
+	 margin-top:15px;
+     margin-left: 35px;
+     padding-top: 3px;
+     padding-left: 20px;
+     padding-bottom: 10px;
+	}
+	#log img{
+		width: 75%;
+	}
+	#menu ul{
+		padding:0px 0px 0px 10px;
+		font-size: 16px;
+	}
+	#menu li a{
+		 padding: 20px 0px 0px 40px;
+	}
+	#bottom {
+	margin-left:55px;
+	width: 100%;
+	}
+}
+
+
+
+
+/*background color of pages*/
+body {
+    background-color: #f8f8f8;
+}
+
+/*homepage*/
+.box {
+ position: absolute;
+ left: 33%;
+ top: 20%;
+ bottom: 40px;
+ right: 300px;
+ width: 500px;
+ height: 75px;
+ border-radius: 20px;
+ background-color: #707070;
+    border: 1px solid black;
+    opacity: 0.4;
+    filter: alpha(opacity=30);
+}
+div.box p {
+	padding: 15px 5px 5px 25px;
+	font-family: tahoma;
+	font-size: 30px;
+    margin: 0;
+    font-weight: bold;
+    color: #000000;
+  }
+  
+.marker1{
+	position:absolute;
+	left: 3%;
+	top: 5%;
+}
+.marker1 img{
+	width:300px;
+	height:300px;
+}
+.marker1 figure:hover img {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
+.marker2{
+	position:absolute;
+	left: 12%;
+	top: 35%;
+}
+.marker2 img{
+ width: 300px; 
+ height: 300px;
+}
+.marker2 figure:hover img {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
+.marker3 {
+	position:absolute;
+	left: 85%;
+	top: 40%;
+}
+.marker3 img{
+ width:250px; /* Size of marker image */
+ height:250px;
+}
+.marker3 figure:hover img {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
+.marker4 {
+	position:absolute;
+	left: 72%;
+	top:-35%;
+}
+.marker4 img{
+  width: 250px; /* Size of marker image */
+  height: 230px;
+  }
+.marker4 figure:hover img {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
+.marker5 {
+	position:absolute;
+	left: 145%;
+	top:-80%;
+}
+.marker5 img{
+  width: 250px; /* Size of marker image */
+  height: 160px;
+  
+  }
+.marker5 figure:hover img {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
+/*introduction page*/
+@media  (min-width: 220px){
+	#introduction {
+	margin-left: 53%;
+	}
+	#introduction p{
+		font-size: 14px;
+	}
+	#introduction img{
+		height: 70px;
+		width: 70px;
+		position: relative;
+		margin: 0 40%;
+	}
+	.subtitle{
+		font-size: 18px;
+		font-weight: bold;
+		margin-left: 20px;
+		padding-top: 2px;
+	}
+}
+@media  (min-width: 580px){
+	#introduction {
+	margin-left: 32%;
+	}
+	#introduction p{
+		font-size: 16px;
+	}
+	#introduction img{
+		height: 100px;
+		width: 100px;
+		position: relative;
+		margin: 0 40%;
+	}
+	.subtitle{
+		font-size: 22px;
+		font-weight: bold;
+		margin-left: 30px;
+		padding-top: 3px;
+	}
+}
+@media  (min-width: 780px){
+	#introduction {
+	margin-left: 22%;
+	}
+	#introduction p{
+		font-size: 18px;
+	}
+	#introduction img{
+		height: 100px;
+		width: 100px;
+		position: relative;
+		margin: 0 40%;
+	}
+	.subtitle{
+		font-size: 28px;
+		font-weight: bold;
+		margin-left: 30px;
+		padding-top: 5px;
+	}
+}
+
+
+/*nuclear in europe page*/
+/*staticstic map page*/
+#statisticsmap h2{
+	position: absolute;
+}
+#svgmap{
+	display: inline;
+	position: absolute;
+}
+#infocontainer{
+	display: inline-block;	
+	font-family: "palatino Linotype";
+}
+.information
+{
+	display:none;
+}
+
+.infocountries:hover {
+	opacity: 0.5;
+}
+/*responsive part of statistic map*/
+@media  (min-width: 220px){
+	#statisticsmap{
+	margin-left: 53%;
+	}
+	#statisticsmap h2{
+	font-size:14px; 
+	margin-left: 53%;
+	}
+	#svgmap{
+	margin-top: 5%;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    overflow: hidden;         
+	}
+	.svg-content {
+    display: inline-block;
+    position: absolute;
+    width: 40%;
+    height: 220px;
+}
+	#infocontainer{
+	margin-left: 32%;
+	line-height: 60%;
+	}
+
+}
+@media  (min-width: 580px){
+	#statisticsmap{
+	margin-left: 32%;
+	}
+	#statisticsmap h2{
+	font-size:16px; 
+	margin-left: 32%;
+	}
+	#svgmap{
+	margin-top: 6%;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    overflow: hidden;         
+	}
+	.svg-content {
+    display: inline-block;
+    position: absolute;
+    width: 40%;
+    height: 320px;
+}
+	#infocontainer{
+	margin-left: 32%;
+	line-height: 60%;
+	}
+
+}	
+@media  (min-width: 780px){
+	#statisticsmap{
+	margin-left: 22%;
+	}
+	#statisticsmap h2{
+	font-size:18px; 
+	margin-left: 22%;
+	}
+	#svgmap{
+	margin-top: 6%;
+    display: inline-block;
+    position: absolute;
+    vertical-align: middle;
+    overflow: hidden;         
+	}
+	.svg-content {
+    display: inline-block;
+    position: absolute;
+    width: 50%;
+    height: 520px;
+}
+	#infocontainer{
+	float: right;
+	margin-right: 10px;
+	line-height: 60%;
+	}
+
+}
+
+/*advantage page*/
+@media  (min-width: 220px){
+	#advantage {
+	margin-left: 53%;
+	}
+	h2{
+		font-size: 22px;
+	}
+	p {
+	    line-height: 20px;
+		font-family: "Palatino Linotype";
+	}
+	/*molecule photos styling*/
+	IMG.displayed {
+	    display: block;
+		margin-left: 35%; 
+		padding-right: 30%;
+	}
+	IMG.displayed1 {
+	    display: block;
+		margin-left: 50%; 
+		padding-left: 20%;
+	}
+	IMG.stack {
+	    display: block;
+		float: right;
+		width: 50%;
+		margin: 20px;
+	}
+	IMG.flowers {
+	    display: block;
+		float: left;
+		width: 50%;
+		margin: 10px;
+	}
+
+	IMG.fission {
+	    display: block;
+		float: left;
+		width: 40%;
+		margin: 10px;
+	}
+	#adv1 {
+		margin-top: 15%;
+	}
+}
+@media  (min-width: 580px){
+	#advantage {
+	margin-left: 32%;
+	}
+	h2{
+		font-size: 26px;
+	}
+	p {
+	    line-height: 24px;
+		font-family: "Palatino Linotype";
+	}
+	/*molecule photos styling*/
+	IMG.displayed {
+	    display: block;
+		margin-left: 35%; 
+		padding-right: 30%;
+	}
+	IMG.displayed1 {
+	    display: block;
+		margin-left: 50%; 
+		padding-left: 20%;
+	}
+	IMG.stack {
+	    display: block;
+		float: right;
+		width: 50%;
+		margin: 20px;
+	}
+	IMG.flowers {
+	    display: block;
+		float: left;
+		width: 50%;
+		margin: 10px;
+	}
+
+	IMG.fission {
+	    display: block;
+		float: left;
+		width: 40%;
+		margin: 10px;
+	}
+	#adv1 {
+		margin-top: 15%;
+	}
+}
+@media  (min-width: 780px){
+	#advantage {
+	margin-left: 22%;
+	}
+	h2{
+		font-size: 28px;
+	}
+	p {
+	    line-height: 28px;
+		font-family: "Palatino Linotype";
+	}
+	/*molecule photos styling*/
+	IMG.displayed {
+	    display: block;
+		margin-left: 35%; 
+		padding-right: 30%;
+	}
+	IMG.displayed1 {
+	    display: block;
+		margin-left: 50%; 
+		padding-left: 20%;
+	}
+	IMG.stack {
+	    display: block;
+		float: right;
+		width: 50%;
+		margin: 20px;
+	}
+	IMG.flowers {
+	    display: block;
+		float: left;
+		width: 50%;
+		margin: 10px;
+	}
+
+	IMG.fission {
+	    display: block;
+		float: left;
+		width: 40%;
+		margin: 10px;
+	}
+	#adv1 {
+		margin-top: 15%;
+	}
+}
+
+
+
+
+/*disadvantage page*/
+/*leaflet map*/
+@media  (min-width: 220px){
+	#mapcontainer {
+	margin-left: 53%;
+	}
+	h2 {
+		font-size: 22px;
+	}
+	#map {
+		
+		display: inline-block;
+		width: 250px;
+		height: 200px;
+	}
+	/*scale image and description*/
+	#svg {
+		display: inline-block;
+		margin-left: 10px;
+		padding-right: 20px;
+		width: 180px;
+		cursor: pointer;
+
+	}
+	#informationbox{
+		margin-top: 5px;
+		width: 280px;
+		font-family: "Palatino Linotype";
+	}
+
+	#waste {
+		margin-left: 53%;
+	}
+	.displayed{
+		width: 80px;
+		height: 80px;
+		margin-left: 50px;
+	}
+
+}
+@media  (min-width: 580px){
+	#mapcontainer {
+	margin-left: 32%;
+	}
+	h2 {
+		font-size: 26px;
+	}
+	#map {
+		
+		display: inline-block;
+		width: 400px;
+		height: 300px;
+	}
+	/*scale image and description*/
+	#svg {
+		display: inline-block;
+		margin-left: 10px;
+		padding-right: 20px;
+		width: 180px;
+		cursor: pointer;
+
+	}
+	#informationbox{
+		margin-top: 5px;
+		width: 280px;
+		font-family: "Palatino Linotype";
+	}
+
+	#waste {
+		margin-left: 32%;
+	}
+	.displayed{
+		width: 100px;
+		height: 100px;
+		margin-left: 50px;
+	}
+
+}
+
+
+@media  (min-width: 780px){
+	#mapcontainer {
+	margin-left: 22%;
+	}
+	h2 {
+		font-size: 28px;
+	}
+	#map {
+		
+		display: inline-block;
+		width: 700px;
+		height: 600px;
+	}
+	/*scale image and description*/
+	#svg {
+		display: inline-block;
+		float: right;
+		padding-right: 20px;
+		width: 280px;
+		cursor: pointer;
+
+	}
+	#informationbox{
+		margin-top: 5px;
+		width: 280px;
+		font-family: "Palatino Linotype";
+	}
+
+	#waste {
+		margin-left: 23%;
+	}
+	.displayed{
+		width: 100px;
+		height: 100px;
+		margin-left: 50px;
+	}
+
+}
+
+/*diary page*/
+@media  (min-width: 220px){
+	#diary{
+		margin-left: 53%;
+		line-height: 70%;
+	}
+	.subtitle{
+		font-size: 16px;
+		font-weight: bold;
+	}
+	#diary p{
+		font-size: 12px;
+	}
+}
+@media  (min-width: 580px){
+	#diary{
+		margin-left: 32%;
+		line-height: 80%;
+	}
+	.subtitle{
+		font-size: 18px;
+		font-weight: bold;
+	}
+	#diary p{
+		font-size: 14px;
+	}
+}
+@media  (min-width: 780px){
+	#diary{
+		margin-left: 22%;
+		line-height: 90%;
+	}
+	.subtitle{
+		font-size: 20px;
+		font-weight: bold;
+	}
+	#diary p{
+		font-size: 16px;
+	}
+}
